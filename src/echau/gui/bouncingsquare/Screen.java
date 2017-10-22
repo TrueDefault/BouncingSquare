@@ -33,7 +33,11 @@ public class Screen extends JPanel {
 	private static final int SIDE_LENGTH = 50;
 	
 	/** The colours that can be applied to the square */
-	private static final Color[] SQUARE_COLOURS = new Color[] {Color.WHITE, Color.RED, Color.GREEN, Color.BLUE};
+	private static final Color[] SQUARE_COLOURS;
+	
+	static {
+		SQUARE_COLOURS = new Color[] {Color.WHITE, Color.RED, Color.GREEN, Color.BLUE};
+	}
 	
 	/* Variables */
 	
@@ -109,10 +113,7 @@ public class Screen extends JPanel {
 	 * respectively.
 	 */
 	public int generateVelocityDirection() {
-		if (Math.random() < 0.5) {
-			return 1;
-		}
-		return -1;
+		return Math.random() < 0.5D ? 1 : -1;
 	}
 	
 	/**
