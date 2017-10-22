@@ -90,8 +90,8 @@ public class Screen extends JPanel {
 			xPos = 0;
 			velocity_x *= -1;
 			changeColourIndex();
-		} else if (xPos >= WIDTH - SIDE_LENGTH) {
-			xPos = WIDTH - SIDE_LENGTH;
+		} else if (xPos >= WIDTH - SIDE_LENGTH + 1) {
+			xPos = WIDTH - SIDE_LENGTH + 1;
 			velocity_x *= -1;
 			changeColourIndex();
 		}
@@ -101,8 +101,8 @@ public class Screen extends JPanel {
 			yPos = 0;
 			velocity_y *= -1;
 			changeColourIndex();
-		} else if (yPos >= HEIGHT - SIDE_LENGTH) {
-			yPos = HEIGHT - SIDE_LENGTH;
+		} else if (yPos >= HEIGHT - SIDE_LENGTH + 1) {
+			yPos = HEIGHT - SIDE_LENGTH + 1;
 			velocity_y *= -1;
 			changeColourIndex();
 		}
