@@ -108,7 +108,9 @@ public class Screen extends JPanel {
 		}
 	}
 	
-	/** Uses Math.random() to generate the direction of the velocity.
+	/**
+	 * Uses Math.random() to generate the direction of the velocity.
+	 * 
 	 * @return 1 or -1 to signify that the velocity has a positive or negative direction,
 	 * respectively.
 	 */
