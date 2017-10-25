@@ -67,7 +67,6 @@ public class Screen extends JPanel {
 	public Screen() {
 		this.setBackground(Color.BLACK);
 		this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
-		
 		this.painter = new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
