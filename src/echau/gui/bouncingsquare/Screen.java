@@ -6,7 +6,9 @@ import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.AbstractAction;
 import javax.swing.JPanel;
+import javax.swing.KeyStroke;
 
 /**
  * The Screen (a JPanel) is the part of the window that the square bounces around in.
@@ -31,6 +33,9 @@ public class Screen extends JPanel {
 	
 	/** Side length of the square */
 	private static final int SIDE_LENGTH = 50;
+	
+	/** The space character: ' ' */
+	private static final char SPACE = ' ';
 	
 	/** The colours that can be applied to the square */
 	private static final Color[] SQUARE_COLOURS;
@@ -69,6 +74,17 @@ public class Screen extends JPanel {
 				repaint();
 			}
 		};
+		
+		this.getInputMap().put(KeyStroke.getKeyStroke(SPACE), "changeColour");
+		this.getActionMap().put("changeColour", new AbstractAction() {
+			/** Default serialVersionUID */
+			private static final long serialVersionUID = 1L;
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				changeColourIndex();
+			}
+		});
 	}
 	
 	/**
