@@ -48,10 +48,10 @@ public class Screen extends JPanel {
 	private int colourIndex = (int) Math.round(Math.random() * (SQUARE_COLOURS.length - 1));
 	
 	/** How many pixels the square travels horizontally each second */
-	private int velocity_x = 2 * generateVelocityDirection();
+	private int velocity_x = 2 * (Math.random() < 0.5 ? 1 : -1);
 	
 	/** How many pixels the square travels vertically each second */
-	private int velocity_y = 2 * generateVelocityDirection();
+	private int velocity_y = 2 * (Math.random() < 0.5 ? 1 : -1);
 	
 	/** x-coordinate of the pixel in the top-left corner of the square */
 	private int xPos = (int) Math.round(Math.random() * (WIDTH - SIDE_LENGTH));
@@ -106,16 +106,6 @@ public class Screen extends JPanel {
 			velocity_y *= -1;
 			changeColourIndex();
 		}
-	}
-	
-	/**
-	 * Uses Math.random() to generate the direction of the velocity.
-	 * 
-	 * @return 1 or -1 to signify that the velocity has a positive or negative direction,
-	 * respectively.
-	 */
-	public int generateVelocityDirection() {
-		return Math.random() < 0.5D ? 1 : -1;
 	}
 	
 	/**
