@@ -14,7 +14,7 @@ import javax.swing.KeyStroke;
  * The Screen (a JPanel) is the part of the window that the square bounces around in.
  * <br>
  * <br>
- * <b>Last modified:</b> 21 October 2017
+ * <b>Last modified:</b> 25 October 2017
  * 
  * @author Eugene Chau
  * @version 1.0
@@ -64,6 +64,9 @@ public class Screen extends JPanel {
 	/** y-coordinate of the pixel in the top-left corner of the square */
 	private int yPos = (int) Math.round(Math.random() * (HEIGHT - SIDE_LENGTH));
 	
+	/**
+	 * Sets the Screen's properties (e.g. background colour), listeners, and keybindings.
+	 */
 	public Screen() {
 		this.setBackground(Color.BLACK);
 		this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
