@@ -12,9 +12,6 @@ import javax.swing.KeyStroke;
 
 /**
  * The Screen (a JPanel) is the part of the window that the square bounces around in.
- * <br>
- * <br>
- * <b>Last modified:</b> 25 October 2017
  * 
  * @author Eugene Chau
  * @version 1.0
@@ -40,6 +37,7 @@ public class Screen extends JPanel {
 	/** The colours that can be applied to the square */
 	private static final Color[] SQUARE_COLOURS;
 	
+	// Initializes the SQUARE_COLOURS array.
 	static {
 		SQUARE_COLOURS = new Color[] {Color.WHITE, Color.RED, Color.GREEN, Color.BLUE};
 	}
@@ -77,6 +75,7 @@ public class Screen extends JPanel {
 			}
 		};
 		
+		// Allows users to press SPACE to change the colour of the square.
 		this.getInputMap().put(KeyStroke.getKeyStroke(SPACE), "changeColour");
 		this.getActionMap().put("changeColour", new AbstractAction() {
 			/** Default serialVersionUID */

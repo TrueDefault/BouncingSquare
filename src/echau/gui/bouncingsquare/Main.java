@@ -8,9 +8,6 @@ import javax.swing.SwingUtilities;
  * <br>
  * This program runs a GUI of a square bouncing around inside a window and changing colours
  * each time it hits the edge of the window.
- * <br>
- * <br>
- * <b>Last modified:</b> 21 October 2017
  * 
  * @author Eugene Chau
  * @version 1.0
